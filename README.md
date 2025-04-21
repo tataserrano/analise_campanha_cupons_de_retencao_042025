@@ -26,7 +26,7 @@ pip install -r requirements.txt
 ```
 
 ## Acesso Rápido
-Caso queira acessar o notebook como visualização, beem como todos os resultados sem necesside de rodar, [clique aqui]([url](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2110729935403588/2434208335637225/4474531956897067/latest.html))
+Caso queira acessar o notebook como visualização, beem como todos os resultados sem necesside de rodar, [clique aqui](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2110729935403588/2434208335637225/4474531956897067/latest.html)
 
 ## Descrição das tabelas de dados disponíveis  
 
