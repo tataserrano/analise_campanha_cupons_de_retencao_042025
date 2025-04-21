@@ -6,7 +6,7 @@ Este repositório contém o código e a análise para avaliar o impacto de uma e
 
 - `data/`: Contém os dados utilizados na análise.
 - `notebooks/`: Notebooks para modelagem e análise exploratória.
-- `outputs/`: Resultados da análise.
+- `Relatório - Campanha de Cupons - Teste AB.pdf`: Relatório da análise.
 - `README.md`: Este arquivo com a documentação do projeto.
 
 ## Pré-requisitos
