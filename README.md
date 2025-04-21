@@ -18,34 +18,32 @@ Antes de executar o projeto, certifique-se de ter os seguintes pacotes instalado
   - statsmodels
   - math
 
-Você pode instalar as dependências utilizando o `pip`:
-
-```bash
-pip install -r requirements
-```
 
 ## Siga os passos abaixo para acessar/processar o notebook:
 
-Etapa 1: Baixar e descompactar os arquivos
-
-1. Faça upload dos seguintes arquivos (baixados manualmente dos links abaixo):
+Etapa 1: Download dos dados
 
 - orders_data	[order.json.gz](https://data-architect-test-source.s3-sa-east-1.amazonaws.com/order.json.gz)
 - consumers_data	[consumer.csv.gz](https://data-architect-test-source.s3-sa-east-1.amazonaws.com/consumer.csv.gz)
 - merchants_data	[restaurant.csv.gz](https://data-architect-test-source.s3-sa-east-1.amazonaws.com/restaurant.csv.gz)
 - ab_test_ref_data	[ab_test_ref.tar.gz](https://data-architect-test-source.s3-sa-east-1.amazonaws.com/ab_test_ref.tar.gz)
 
-2. Extraia os arquivos .tar.gz localmente e envie os CSVs/JSONs para o Databricks, salvando as tabelas conforme o nome do passo 1
+Etapa 2: Preparar os dados
+- Extraia os arquivos .tar.gz localmente.
+- Faça o upload dos arquivos .csv e .json para o seu ambiente (ex: Databricks).
+- Garanta que os nomes das tabelas e os caminhos no notebook estejam corretos.
 
-3. Altere o caminho das fontes, se necessário, no notebook.
-
+Etapa 3: Acessando e Executando o Notebook 
+- Faça o download do arquivo `case_ifood - analise_campanha_cupons.py` 
+- Abra o notebook em seu ambiente de análise (por exemplo, Databricks, Jupyter, VS Code, etc).
+- Ajuste os caminhos dos arquivos de dados, se necessário, de acordo com a localização onde os dados foram salvos/carregados.
    
 ## Acesso Rápido
 Caso queira acessar o notebook como visualização, beem como todos os resultados sem necesside de rodar, [clique aqui](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2110729935403588/2434208335637225/4474531956897067/latest.html)
 
 ## Descrição das tabelas de dados disponíveis  
 
-#Pedidos (order.json)  
+#orders_data (order.json)  
 https://data-architect-test-source.s3-sa-east-1.amazonaws.com/order.json.gz 
 Contém dados de cerca de 3.6 milhões de pedidos realizados entre dez/18 e  jan/19. Cada pedido possui um order_id e os seguintes atributos complementa res:  
 - cpf (string): Cadastro de Pessoa Física do usuário que realizou o pedi do  
@@ -69,7 +67,7 @@ Contém dados de cerca de 3.6 milhões de pedidos realizados entre dez/18 e  jan
 - order_total_amount (float): Valor total do pedido em Reais  - origin_platform (string): Sistema operacional do dispositivo do  usuário  
 - order_scheduled_date (timestamp): Data e horário para entrega do  pedido agendado
 
-#Usuários (consumers.csv)  
+#consumers_data (consumers.csv)  
 https://data-architect-test-source.s3-sa-east-1.amazonaws.com/ consumer.csv.gz 
 Contém dados de cerca de 806k usuários do iFood. Cada usuário possui um  customer_id e os seguintes atributos complementares:  
 - customer_id (string): Identificador do usuário  
@@ -79,7 +77,7 @@ Contém dados de cerca de 806k usuários do iFood. Cada usuário possui um  cust
 - customer_phone_area (string): Código de área do telefone do usuá rio  
 - customer_phone_number (string): Número do telefone do usuário  
 
-#Merchants (restaurant.csv)  
+#merchants_data (restaurant.csv)  
 https://data-architect-test-source.s3-sa-east-1.amazonaws.com/ restaurant.csv.gz 
 Contém dados de cerca de 7k restaurantes do iFood. Cada restaurante possui  um id e os seguintes atributos complementares:  
 - id (string): Identificador do restaurante  
@@ -92,7 +90,7 @@ Contém dados de cerca de 7k restaurantes do iFood. Cada restaurante possui  um 
 - merchant_state (string): Estado do restaurante  
 - merchant_country (string): País do restaurante 
 
-#Marcação de usuários que participaram do teste A/B (ab_- test_ref.csv)  
+#ab_test_ref_data (ab_- test_ref.csv)  
 https://data-architect-test-source.s3-sa-east-1.amazonaws.com/ ab_test_ref.tar.gz 
 Contém uma marcação indicando se um usuário participou do teste A/B em  questão. Assim como a base de usuários, cada usuário possui um customer_id.  Os campos são:  
 - customer_id (string): Identificador do usuário  
