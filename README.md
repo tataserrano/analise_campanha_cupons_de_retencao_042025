@@ -3,9 +3,7 @@
 Este repositório contém o código e a análise para avaliar o impacto de uma estratégia de cupons sobre a retenção de usuários. O objetivo é analisar se o uso de cupons está influenciando a taxa de retenção, o ticket médio e a taxa de conversão de usuários.
 
 ## Estrutura do Projeto
-
-- `data/`: Contém os dados utilizados na análise.
-- `notebooks/`: Notebooks para modelagem e análise exploratória.
+- `case_ifood - analise_campanha_cupons.py`: Notebook com modelagem e análise exploratória.
 - `Relatório - Campanha de Cupons - Teste AB.pdf`: Relatório da análise.
 - `README.md`: Este arquivo com a documentação do projeto.
 
@@ -18,13 +16,30 @@ Antes de executar o projeto, certifique-se de ter os seguintes pacotes instalado
   - pandas
   - numpy
   - statsmodels
+  - math
 
 Você pode instalar as dependências utilizando o `pip`:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements
 ```
 
+## Siga os passos abaixo para acessar/processar o notebook:
+
+Etapa 1: Baixar e descompactar os arquivos
+
+1. Faça upload dos seguintes arquivos (baixados manualmente dos links abaixo):
+
+- orders_data	[order.json.gz](https://data-architect-test-source.s3-sa-east-1.amazonaws.com/order.json.gz)
+- consumers_data	[consumer.csv.gz](https://data-architect-test-source.s3-sa-east-1.amazonaws.com/consumer.csv.gz)
+- merchants_data	[restaurant.csv.gz](https://data-architect-test-source.s3-sa-east-1.amazonaws.com/restaurant.csv.gz)
+- ab_test_ref_data	[ab_test_ref.tar.gz](https://data-architect-test-source.s3-sa-east-1.amazonaws.com/ab_test_ref.tar.gz)
+
+2. Extraia os arquivos .tar.gz localmente e envie os CSVs/JSONs para o Databricks, salvando as tabelas conforme o nome do passo 1
+
+3. Altere o caminho das fontes, se necessário, no notebook.
+
+   
 ## Acesso Rápido
 Caso queira acessar o notebook como visualização, beem como todos os resultados sem necesside de rodar, [clique aqui](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2110729935403588/2434208335637225/4474531956897067/latest.html)
 
