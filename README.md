@@ -17,10 +17,7 @@ Antes de executar o projeto, certifique-se de ter os seguintes pacotes instalado
 - Bibliotecas Python:
   - pandas
   - numpy
-  - matplotlib
-  - seaborn
   - statsmodels
-  - scikit-learn
 
 Você pode instalar as dependências utilizando o `pip`:
 
